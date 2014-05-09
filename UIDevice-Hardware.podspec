@@ -9,5 +9,4 @@ Pod::Spec.new do |s|
   s.source       = { :git => 'https://github.com/yyjim/UIDevice-Hardware.git', :tag => s.version.to_s }
   s.source_files = 'UIDevice+Hardware.{h,m}'
   s.requires_arc = true
-  s.xcconfig     = { 'OTHER_LDFLAGS' => '-ObjC -all_load -force_load' }
 end
