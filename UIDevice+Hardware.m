@@ -181,13 +181,12 @@
         case UIDevice3GSiPhone:
         case UIDevice1GiPod:
         case UIDevice1GiPad:
-        case UIDevice2GiPadMini:
+        case UIDevice3GiPod:
+        case UIDevice4GiPod:
             memoryClass = UIDeviceMemoryClassLow;
             break;
         case UIDevice4iPhone:
         case UIDevice4SiPhone:
-        case UIDevice3GiPod:
-        case UIDevice4GiPod:
         case UIDevice5GiPod:
         case UIDevice2GiPad:
         case UIDevice1GiPadMini:
@@ -198,6 +197,7 @@
         case UIDevice5CiPhone:
         case UIDevice3GiPad:
         case UIDevice4GiPad:
+        case UIDevice2GiPadMini:
             memoryClass = UIDeviceMemoryClassHigh;
             break;
         default:
