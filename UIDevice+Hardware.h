@@ -38,6 +38,8 @@ typedef NS_ENUM(NSUInteger, UIDeviceModelType) {
     UIDevice5iPhone,
     UIDevice5CiPhone,
     UIDevice5SiPhone,
+    UIDevice6iPhone,
+    UIDevice6PlusiPhone,
     
     UIDevice1GiPod,
     UIDevice2GiPod,

@@ -128,6 +128,8 @@
     if ([modelIdentifier isEqualToString:@"iPhone5,4"])    return UIDevice5CiPhone;
     if ([modelIdentifier isEqualToString:@"iPhone6,1"])    return UIDevice5SiPhone;
     if ([modelIdentifier isEqualToString:@"iPhone6,2"])    return UIDevice5SiPhone;
+    if ([modelIdentifier isEqualToString:@"iPhone7,1"])    return UIDevice6PlusiPhone;
+    if ([modelIdentifier isEqualToString:@"iPhone7,2"])    return UIDevice6iPhone;
     
     // iPod http://theiphonewiki.com/wiki/IPod
     
@@ -192,6 +194,8 @@
         case UIDevice1GiPadMini:
             memoryClass = UIDeviceMemoryClassMedium;
             break;
+        case UIDevice6iPhone:
+        case UIDevice6PlusiPhone:
         case UIDevice5iPhone:
         case UIDevice5SiPhone:
         case UIDevice5CiPhone:
@@ -224,6 +228,8 @@
     if ([modelIdentifier isEqualToString:@"iPhone5,4"])    return @"iPhone 5c (Global)";
     if ([modelIdentifier isEqualToString:@"iPhone6,1"])    return @"iPhone 5s (GSM)";
     if ([modelIdentifier isEqualToString:@"iPhone6,2"])    return @"iPhone 5s (Global)";
+    if ([modelIdentifier isEqualToString:@"iPhone7,1"])    return @"iPhone 6 Plus";
+    if ([modelIdentifier isEqualToString:@"iPhone7,2"])    return @"iPhone 6";
     
     // iPad http://theiphonewiki.com/wiki/IPad
     
