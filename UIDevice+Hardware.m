@@ -140,23 +140,29 @@
     if ([modelIdentifier hasPrefix:@"iPod5"])              return UIDevice5GiPod;
     
     // iPad http://theiphonewiki.com/wiki/IPad
-    
     if ([modelIdentifier hasPrefix:@"iPad1"])              return UIDevice1GiPad;
-    if ([modelIdentifier isEqualToString:@"iPad2,1"])      return UIDevice2GiPad;
-    if ([modelIdentifier isEqualToString:@"iPad2,2"])      return UIDevice2GiPad;
-    if ([modelIdentifier isEqualToString:@"iPad2,3"])      return UIDevice2GiPad;
-    if ([modelIdentifier isEqualToString:@"iPad2,4"])      return UIDevice2GiPad;
+    
+    if ([@[@"iPad2,1", @"iPad2,2", @"iPad2,3", @"iPad2,4"] containsObject:modelIdentifier]) {
+        return UIDevice2GiPad;
+    }
     if ([modelIdentifier hasPrefix:@"iPad3"])              return UIDevice3GiPad;
-    if ([modelIdentifier hasPrefix:@"iPad4"])              return UIDevice4GiPad;
+    
+    if ([@[@"iPad4,1", @"iPad4,2", @"iPad4,3"] containsObject:modelIdentifier]) {
+         return UIDevice1GiPadAir;
+    }
+    if ([modelIdentifier hasPrefix:@"iPad5"])              return UIDevice2GiPadAir;
     
     // iPad Mini http://theiphonewiki.com/wiki/IPad_mini
-    
-    if ([modelIdentifier isEqualToString:@"iPad2,5"])      return UIDevice1GiPadMini;
-    if ([modelIdentifier isEqualToString:@"iPad2,6"])      return UIDevice1GiPadMini;
-    if ([modelIdentifier isEqualToString:@"iPad2,7"])      return UIDevice1GiPadMini;
-    if ([modelIdentifier isEqualToString:@"iPad4,4"])      return UIDevice2GiPadMini;
-    if ([modelIdentifier isEqualToString:@"iPad4,5"])      return UIDevice2GiPadMini;
-    
+    if ([@[@"iPad2,5", @"iPad2,6", @"iPad2,7"] containsObject:modelIdentifier]) {
+        return UIDevice1GiPadMini;
+    }
+    if ([@[@"iPad4,4", @"iPad4,5", @"iPad4,6"] containsObject:modelIdentifier]) {
+        return UIDevice2GiPadMini;
+    }
+    if ([@[@"iPad4,7", @"iPad4,8", @"iPad4,9"] containsObject:modelIdentifier]) {
+        return UIDevice3GiPadMini;
+    }
+
     // Apple TV
     if ([modelIdentifier hasPrefix:@"AppleTV2"])           return UIDeviceAppleTV2;
     
@@ -200,8 +206,10 @@
         case UIDevice5SiPhone:
         case UIDevice5CiPhone:
         case UIDevice3GiPad:
-        case UIDevice4GiPad:
+        case UIDevice1GiPadAir:
+        case UIDevice2GiPadAir:
         case UIDevice2GiPadMini:
+        case UIDevice3GiPadMini:
             memoryClass = UIDeviceMemoryClassHigh;
             break;
         default:
@@ -247,6 +255,8 @@
     
     if ([modelIdentifier isEqualToString:@"iPad4,1"])      return @"iPad Air (WiFi)";
     if ([modelIdentifier isEqualToString:@"iPad4,2"])      return @"iPad Air (Cellular)";
+    if ([modelIdentifier isEqualToString:@"iPad5,3"])      return @"iPad Air 2 (Wi-Fi)";
+    if ([modelIdentifier isEqualToString:@"iPad5,4"])      return @"iPad Air 2 (Cellular)";
     
     // iPad Mini http://theiphonewiki.com/wiki/IPad_mini
     
@@ -255,6 +265,9 @@
     if ([modelIdentifier isEqualToString:@"iPad2,7"])      return @"iPad mini 1G (Global)";
     if ([modelIdentifier isEqualToString:@"iPad4,4"])      return @"iPad mini 2G (WiFi)";
     if ([modelIdentifier isEqualToString:@"iPad4,5"])      return @"iPad mini 2G (Cellular)";
+    if ([modelIdentifier isEqualToString:@"iPad4,7"])      return @"iPad mini 3G (Wi-Fi)";
+    if ([modelIdentifier isEqualToString:@"iPad4,8"])      return @"iPad mini 3G (Cellular)";
+    if ([modelIdentifier isEqualToString:@"iPad4,9"])      return @"iPad mini 3G (Cellular)";
     
     // iPod http://theiphonewiki.com/wiki/IPod
     

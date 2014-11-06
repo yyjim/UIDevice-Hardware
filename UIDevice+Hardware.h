@@ -50,10 +50,12 @@ typedef NS_ENUM(NSUInteger, UIDeviceModelType) {
     UIDevice1GiPad,
     UIDevice2GiPad,
     UIDevice3GiPad,
-    UIDevice4GiPad,
+    UIDevice1GiPadAir,
+    UIDevice2GiPadAir,
     
     UIDevice1GiPadMini,
     UIDevice2GiPadMini,
+    UIDevice3GiPadMini,
     
     UIDeviceAppleTV2,
     UIDeviceUnknownAppleTV,
