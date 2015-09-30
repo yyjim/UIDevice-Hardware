@@ -130,6 +130,8 @@
     if ([modelIdentifier isEqualToString:@"iPhone6,2"])    return UIDevice5SiPhone;
     if ([modelIdentifier isEqualToString:@"iPhone7,1"])    return UIDevice6PlusiPhone;
     if ([modelIdentifier isEqualToString:@"iPhone7,2"])    return UIDevice6iPhone;
+    if ([modelIdentifier isEqualToString:@"iPhone8,1"])    return UIDevice6SiPhone;
+    if ([modelIdentifier isEqualToString:@"iPhone8,2"])    return UIDevice6SPlusiPhone;
     
     // iPod http://theiphonewiki.com/wiki/IPod
     
@@ -161,6 +163,9 @@
     }
     if ([@[@"iPad4,7", @"iPad4,8", @"iPad4,9"] containsObject:modelIdentifier]) {
         return UIDevice3GiPadMini;
+    }
+    if ([@[@"iPad5,1", @"iPad5,2"] containsObject:modelIdentifier]) {
+        return UIDevice4GiPadMini;
     }
 
     // Apple TV
@@ -200,6 +205,8 @@
         case UIDevice1GiPadMini:
             memoryClass = UIDeviceMemoryClassMedium;
             break;
+        case UIDevice6SPlusiPhone:
+        case UIDevice6SiPhone:
         case UIDevice6iPhone:
         case UIDevice6PlusiPhone:
         case UIDevice5iPhone:
@@ -210,6 +217,7 @@
         case UIDevice2GiPadAir:
         case UIDevice2GiPadMini:
         case UIDevice3GiPadMini:
+        case UIDevice4GiPadMini:
             memoryClass = UIDeviceMemoryClassHigh;
             break;
         default:
@@ -238,6 +246,8 @@
     if ([modelIdentifier isEqualToString:@"iPhone6,2"])    return @"iPhone 5s (Global)";
     if ([modelIdentifier isEqualToString:@"iPhone7,1"])    return @"iPhone 6 Plus";
     if ([modelIdentifier isEqualToString:@"iPhone7,2"])    return @"iPhone 6";
+    if ([modelIdentifier isEqualToString:@"iPhone8,1"])    return @"iPhone 6s Plus";
+    if ([modelIdentifier isEqualToString:@"iPhone8,2"])    return @"iPhone 6s";
     
     // iPad http://theiphonewiki.com/wiki/IPad
     
@@ -255,19 +265,22 @@
     
     if ([modelIdentifier isEqualToString:@"iPad4,1"])      return @"iPad Air (WiFi)";
     if ([modelIdentifier isEqualToString:@"iPad4,2"])      return @"iPad Air (Cellular)";
+    if ([modelIdentifier isEqualToString:@"iPad4,3"])      return @"iPad Air (CDMA)";
     if ([modelIdentifier isEqualToString:@"iPad5,3"])      return @"iPad Air 2 (Wi-Fi)";
     if ([modelIdentifier isEqualToString:@"iPad5,4"])      return @"iPad Air 2 (Cellular)";
     
     // iPad Mini http://theiphonewiki.com/wiki/IPad_mini
     
-    if ([modelIdentifier isEqualToString:@"iPad2,5"])      return @"iPad mini 1G (WiFi)";
-    if ([modelIdentifier isEqualToString:@"iPad2,6"])      return @"iPad mini 1G (GSM)";
-    if ([modelIdentifier isEqualToString:@"iPad2,7"])      return @"iPad mini 1G (Global)";
-    if ([modelIdentifier isEqualToString:@"iPad4,4"])      return @"iPad mini 2G (WiFi)";
-    if ([modelIdentifier isEqualToString:@"iPad4,5"])      return @"iPad mini 2G (Cellular)";
-    if ([modelIdentifier isEqualToString:@"iPad4,7"])      return @"iPad mini 3G (Wi-Fi)";
-    if ([modelIdentifier isEqualToString:@"iPad4,8"])      return @"iPad mini 3G (Cellular)";
-    if ([modelIdentifier isEqualToString:@"iPad4,9"])      return @"iPad mini 3G (Cellular)";
+    if ([modelIdentifier isEqualToString:@"iPad2,5"])      return @"iPad Mini 1G (WiFi)";
+    if ([modelIdentifier isEqualToString:@"iPad2,6"])      return @"iPad Mini 1G (GSM)";
+    if ([modelIdentifier isEqualToString:@"iPad2,7"])      return @"iPad Mini 1G (Global)";
+    if ([modelIdentifier isEqualToString:@"iPad4,4"])      return @"iPad Mini Retina (WiFi)";
+    if ([modelIdentifier isEqualToString:@"iPad4,5"])      return @"iPad Mini Retina (Cellular)";
+    if ([modelIdentifier isEqualToString:@"iPad4,7"])      return @"iPad Mini 3 (WiFi)";
+    if ([modelIdentifier isEqualToString:@"iPad4,8"])      return @"iPad Mini 3 (Cellular)";
+    if ([modelIdentifier isEqualToString:@"iPad4,9"])      return @"iPad Mini 3 (Cellular)";
+    if ([modelIdentifier isEqualToString:@"iPad5,1"])      return @"iPad Mini 4 (WiFi)";
+    if ([modelIdentifier isEqualToString:@"iPad5,2"])      return @"iPad Mini 4 (Cellular)";
     
     // iPod http://theiphonewiki.com/wiki/IPod
     
